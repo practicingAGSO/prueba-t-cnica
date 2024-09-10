@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "dd3776aa-4393-423e-bedb-c99c185f7f24",
+		"name": "high-risk-list",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23948146",
+		"_collection_link": "https://orange-meadow-507486.postman.co/workspace/Productividad~41694c45-8ee6-4cf5-be49-c6afae0b51be/collection/23948146-dd3776aa-4393-423e-bedb-c99c185f7f24?action=share&source=collection_link&creator=23948146"
+	},
+	"item": [
+		{
+			"name": "Offshore_leaks_data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNTgzNzc2NCwianRpIjoiZTdjNjJmZjUtZGY0NS00OTcxLWFjZjMtMGI4NGM0MTJlMTY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzI1ODM3NzY0LCJjc3JmIjoiODNhMDZmNzMtOGQ3Zi00ZTJhLTk0Y2YtYTEwODMzNjU4ZjBjIiwiZXhwIjoxNzI1ODM4NjY0fQ.DSobKY4IFLeYggDEtlxSm_yOYOaw6sPfNPNm6zaLv6Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/offshore_leaks?name=drug",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"offshore_leaks"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "drug"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ofac_sanctions_data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNTgzNzc2NCwianRpIjoiZTdjNjJmZjUtZGY0NS00OTcxLWFjZjMtMGI4NGM0MTJlMTY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzI1ODM3NzY0LCJjc3JmIjoiODNhMDZmNzMtOGQ3Zi00ZTJhLTk0Y2YtYTEwODMzNjU4ZjBjIiwiZXhwIjoxNzI1ODM4NjY0fQ.DSobKY4IFLeYggDEtlxSm_yOYOaw6sPfNPNm6zaLv6Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/ofac_sanctions_list?name=drug",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"ofac_sanctions_list"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "drug"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Angel\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Angel\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:5000",
+			"type": "string"
+		}
+	]
+}
